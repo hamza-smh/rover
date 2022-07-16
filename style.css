@@ -7,7 +7,7 @@ body {
 
 .commutes {
     align-content: stretch;
-    color: #202124;
+    color: #202420;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -159,14 +159,14 @@ body {
 
 .commutes-destinations .add-button {
     align-items: center;
-    background-color: #e8f0fe;
+    background-color: #c3fab6f3;
     border-radius: 8px;
-    border-color: #e8f0fe;
+    border-color: #eafee8;
     border-style: solid;
-    color: #4285f4;
+    color: #002b00;
     cursor: pointer;
     display: flex;
-    fill: #4285f4;
+    fill: #002b00;
     flex-direction: column;
     flex-grow: 1;
     font-weight: bold;
@@ -177,17 +177,19 @@ body {
 }
 
 .commutes-destinations .add-button:hover {
-    background-color: #d2e3fc;
-    border-color: #d2e3fc;
+    background-color: #002b00;
+    border-color: #000000;
+    color:#c3fab6f3;
+    fill:#c3fab6f3;
 }
 
 .commutes-destinations .destination {
     border-radius: 4px;
-    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    color: #5f6368;
+    box-shadow: 0 1px 2px 0 rgba(206, 255, 192, 0.993), 0 1px 1px 1px rgba(197, 255, 180, 0.993);
+    color: #242121;
     cursor: pointer;
     display: flex;
-    fill: #5f6368;
+    fill: #252729;
     flex: 1 1 0;
     height: 72px;
     justify-content: space-between;
@@ -199,7 +201,7 @@ body {
 }
 
 .commutes-destinations .active:after {
-    background-color: #4285f4;
+    background-color: #043000;
     content: '';
     display: block;
     height: 4px;
@@ -208,9 +210,13 @@ body {
     top: 0;
     width: 100%;
 }
+#delete-destination-button hide{
+    background-color: #2e0cee;
+    color: rgb(13, 218, 40);
+}
 
 .commutes-destinations .active .destination-controls .directions-button {
-    fill: #4285f4;
+    fill: #093101;
 }
 
 .commutes-destinations .active .destination-controls .edit-button {
@@ -221,7 +227,9 @@ body {
     background-color: #fce8e6;
     color: #d93025;
 }
-
+.destination-container{
+    background-color: #000000;
+}
 .commutes-destinations .destination:hover,
 .commutes-destinations .destination:focus-within {
     background-color: #f8f9fa;
@@ -305,12 +313,12 @@ body {
 }
 
 .commutes-destinations .destination .directions-button:hover {
-    background-color: #e8f0fe;
-    fill: #4285f4;
+    background-color: #002904;
+    fill: #ffffff;
 }
 
 .commutes-destinations .destination .edit-button {
-    background-color: #fff;
+    background-color: white;
     border-radius: 20px;
     border: 1px solid #dadce0;
     display: none;
@@ -319,8 +327,8 @@ body {
     line-height: 22px;
     margin: 8px 0 0 0;
     padding: 3px 12px 3px 5px;
-    fill: #616161;
-    color: #616161;
+    fill: #002904;
+    color: #002904;
     cursor: pointer;
 }
 
@@ -333,7 +341,9 @@ body {
 }
 
 .commutes-destinations .destination .edit-button:hover {
-    background-color: #f1f3f4;
+    background-color:#002904;
+    color:rgb(255,255,255);
+    fill:rgb(255, 255, 255);
 }
 
 .commutes-map {
@@ -354,7 +364,7 @@ body {
 
 .commutes-modal-container {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 95, 79, 0.26);
     display: none;
     height: 100%;
     justify-content: center;
@@ -384,7 +394,7 @@ body {
 }
 #place{
     background-color: rgb(193, 250, 193);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .commutes-modal .heading {
@@ -445,7 +455,7 @@ body {
 }
 
 .commutes-modal .travel-modes label:hover {
-    background-color: #146300;
+    background-color: #209901;
 }
 
 .commutes-modal .travel-modes svg {
@@ -483,23 +493,30 @@ body {
 }
 
 .commutes-modal .modal-action-bar .delete-destination-button {
-    color: #c5221f;
+    color: #d0ff00;
     left: 18px;
     position: absolute;
+    background-color: inherit;
 }
 
 .commutes-modal .modal-action-bar .cancel-button {
-    color: #0000008a;
+    color: #fffbfb;
+    background-color: inherit;
+}
+.cancel-button :hover{
+    text-shadow: 0px 0px 1px #fcfcfc, 0px 0px 2px #ffffff, 0px 0px 10px #ffffff;
 }
 
 .commutes-modal .modal-action-bar .add-destination-button,
-.commutes-modal .modal-action-bar .edit-destination-button {
-    color: #1a73e8;
+.commutes-modal .modal-action-bar .edit-destination-button{
+    color: #fafafa;
+    background-color: inherit;
 }
 
 .hide {
     display: none;
 }
+
 
 #top {
 
@@ -519,9 +536,9 @@ body {
     position: sticky;
     margin-top: -10px;
 
-    animation: changeColour 5s linear 10ms infinite alternate;
+    animation: changeColour 500ms ease-in 10s infinite alternate;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.856), rgba(20, 112, 2, 0.938), black);
-    animation-timing-function: ease;
+    
 
     @media only screen and (max-width: 100rem) {
         .contain {
@@ -580,4 +597,16 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0.856), rgba(42, 250, 0, 0.
 }
 #heading{
     background-color: #012e03;
+}
+#roll{
+    background-color: rgb(0, 0, 0);
+        padding: 6px;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        list-style: none;
+        margin:0px;       
+}
+#roll :hover{
+    text-shadow: 0px 0px 5px #fcfcfc, 0px 0px 10px #ffffff, 0px 0px 20px #ffffff;
 }
